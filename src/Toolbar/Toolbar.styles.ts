@@ -4,15 +4,16 @@ export const toolbarStyles = makeStyles({
     drawerBody: {
         display: 'flex',
         flexDirection: 'column',
-        marginTop: '20px'
+        marginTop: '12px'
     },
     drawerButton: {
         marginTop: '4px',
         justifyContent: 'flex-start'
     },
     drawerDivider: {
-        display:'flex',
-        maxHeight: '16px'
+        display: 'flex',
+        maxHeight: '16px',
+        marginTop: '12px'
     },
     toolbar: {
         display: 'flex',

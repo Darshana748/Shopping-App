@@ -1,10 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export const OurProducts=()=> {
-  return (
-    <div>
-      My Projects
-    </div>
-  )
-}
-
+export const OurProducts = () => {
+  return <div>My Projects</div>;
+};
