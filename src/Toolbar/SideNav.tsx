@@ -6,25 +6,22 @@ import {
   DrawerBody,
   DrawerHeader,
   DrawerHeaderTitle,
+  Text,
 } from "@fluentui/react-components";
-import {
-  BoxFilled,
-  BoxRegular,
-  Dismiss24Regular,
-  DismissFilled,
-  HomeFilled,
-  HomeRegular,
-  PersonCallFilled,
-  PersonCallRegular,
-  PersonQuestionMarkFilled,
-  PersonQuestionMarkRegular,
-} from "@fluentui/react-icons";
+import { DismissFilled } from "@fluentui/react-icons";
 import { toolbarStyles } from "./Toolbar.styles.ts";
+import { useNavigate } from "react-router-dom";
+import { pageData } from "../Routes.tsx";
 
 export const SideNav = (props) => {
   const classes = toolbarStyles();
+  const navigate = useNavigate();
+  const clickHandler = (link: string) => {
+    navigate(link);
+    props.changeStatus(false);
+  };
   return (
-    <Drawer open={props.status} >
+    <Drawer open={props.status}>
       <DrawerHeader>
         <DrawerHeaderTitle
           action={
@@ -39,47 +36,18 @@ export const SideNav = (props) => {
         </DrawerHeaderTitle>
       </DrawerHeader>
       <DrawerBody className={classes.drawerBody}>
-        <Button
-          appearance={"subtle"}
-          className={classes.drawerButton}
-          icon={<HomeFilled />}
-          href={"/"}
-          onClick={() => props.changeStatus(false)}
-        >
-          Home
-        </Button>
-        <Button
-          appearance={"subtle"}
-          className={classes.drawerButton}
-          icon={<BoxFilled />}
-          href={"/our-products"}
-          onClick={() => props.changeStatus(false)}
-        >
-          Our Products
-        </Button>
-        <Button
-          appearance={"subtle"}
-          className={classes.drawerButton}
-          icon={<PersonCallFilled />}
-          href={"/contact-us"}
-          onClick={() => props.changeStatus(false)}
-        >
-          Contact Us
-        </Button>
-        <Button
-          appearance={"subtle"}
-          className={classes.drawerButton}
-          icon={<PersonQuestionMarkFilled />}
-          href={"/about-us"}
-          onClick={() => props.changeStatus(false)}
-        >
-          About Us
-        </Button>
-        <Divider
-          appearance={"strong"}
-          alignContent="start"
-          className={classes.drawerDivider}
-        />
+        {pageData.map((item) => (
+          <Button
+            appearance={"subtle"}
+            className={classes.drawerButton}
+            icon={item.icon}
+            onClick={() => clickHandler(item.path)}
+          >
+            {item.title}
+          </Button>
+        ))}
+        <Divider appearance={"strong"} className={classes.drawerDivider} />
+        <Text></Text>
       </DrawerBody>
     </Drawer>
   );

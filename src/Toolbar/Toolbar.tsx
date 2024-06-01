@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  mergeClasses,
-  Text,
-} from "@fluentui/react-components";
+import { Button, mergeClasses, Text } from "@fluentui/react-components";
 import { NavigationFilled, NavigationRegular } from "@fluentui/react-icons";
 import { SideNav } from "./SideNav.tsx";
 import { toolbarStyles } from "./Toolbar.styles.ts";
@@ -21,12 +17,11 @@ export const Toolbar = () => {
           appearance={"subtle"}
           className={mergeClasses(classes.toolbarItem, classes.toolbarButton)}
         />
-        <Text size={500} weight={'semibold'} className={classes.toolbarItem}>
-          {" "}
-          MegaMart{" "}
+        <Text size={500} weight={"semibold"} className={classes.toolbarItem}>
+          MegaMart
         </Text>
       </div>
-      {navStatus && <SideNav status={navStatus} changeStatus={setNavStatus}/>}
+      {navStatus && <SideNav status={navStatus} changeStatus={setNavStatus} />}
     </>
   );
 };

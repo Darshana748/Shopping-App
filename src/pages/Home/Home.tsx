@@ -1,10 +1,5 @@
 import React from "react";
 
-export const Home=()=> {
-  
-  return (
-   <>home</>
-  );
-}
-
-
+export const Home = () => {
+  return <>home</>;
+};
