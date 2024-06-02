@@ -1,8 +1,8 @@
 import React from "react";
-import { Home } from "./pages/Home/Home.tsx";
-import { ContactUs } from "./pages/ContactUs/ContactUs.tsx";
-import { AboutUs } from "./pages/AboutUs/AboutUs.tsx";
-import { OurProducts } from "./pages/OurProducts/OurProducts.tsx";
+import { Home } from "./pages/Home/Home";
+import { ContactUs } from "./pages/ContactUs/ContactUs";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
+import { OurProducts } from "./pages/OurProducts/OurProducts";
 import {
   BoxFilled,
   HomeFilled,
@@ -13,7 +13,7 @@ import {
 export const pageData = [
   {
     path: "/",
-    element: <Home />,
+    element: <Home/>,
     title: "Home",
     icon: <HomeFilled />,
   },

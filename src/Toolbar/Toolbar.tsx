@@ -7,8 +7,8 @@ import {
   Text,
 } from "@fluentui/react-components";
 import { NavigationFilled, NavigationRegular } from "@fluentui/react-icons";
-import { SideNav } from "./SideNav.tsx";
-import { toolbarStyles } from "./Toolbar.styles.ts";
+import { SideNav } from "./SideNav";
+import { toolbarStyles } from "./Toolbar.styles";
 
 export const Toolbar = () => {
   const [navStatus, setNavStatus] = useState(false);

@@ -6,8 +6,8 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
-import { pageData } from "./Routes.tsx";
-import { Toolbar } from "./Toolbar/Toolbar.tsx";
+import { pageData } from "./Routes";
+import { Toolbar } from "./Toolbar/Toolbar";
 const App = () => {
   return (
     <BrowserRouter>

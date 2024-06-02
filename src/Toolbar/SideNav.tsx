@@ -9,9 +9,9 @@ import {
   Text,
 } from "@fluentui/react-components";
 import { DismissFilled } from "@fluentui/react-icons";
-import { toolbarStyles } from "./Toolbar.styles.ts";
+import { toolbarStyles } from "./Toolbar.styles";
 import { useNavigate } from "react-router-dom";
-import { pageData } from "../Routes.tsx";
+import { pageData } from "../Routes";
 
 export const SideNav = (props) => {
   const classes = toolbarStyles();
