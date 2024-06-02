@@ -51,7 +51,7 @@ export const LogIn = () => {
         <CardFooter className={classes.cardFooter}>
           <Button appearance={"primary"}>Sign In</Button>
           <Divider>or</Divider>
-          <Button icon={googleIcon} iconPosition={"before"} size={'large'}>
+          <Button icon={googleIcon} iconPosition={"before"} >
             Login with Google
           </Button>
         </CardFooter>
