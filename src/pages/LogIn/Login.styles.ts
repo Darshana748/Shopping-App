@@ -7,7 +7,7 @@ export const loginStyles = makeStyles({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: tokens.colorBrandBackground2Hover
+        backgroundColor: tokens.colorNeutralBackground2
     },
     card: {
         display: 'flex',
