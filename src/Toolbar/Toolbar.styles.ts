@@ -17,6 +17,7 @@ export const toolbarStyles = makeStyles({
     },
     toolbar: {
         display: 'flex',
+        justifyContent: 'space-between',
         alignItems: 'center',
         minHeight: '40px',
         padding: '12px',
@@ -29,5 +30,17 @@ export const toolbarStyles = makeStyles({
         ':hover': {
             backgroundColor: tokens.colorNeutralBackground1
         },
+    },
+    toolbarStart: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+    },
+    toolbarEnd: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        
     }
+
 })
