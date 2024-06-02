@@ -1,17 +1,21 @@
 {
-  "homepage":"https:/Darshana748.github.io/Shopping-App",
+  "homepage": "https:/Darshana748.github.io/Shopping-App",
   "name": "shopping",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fluentui/react-components": "^9.53.0",
     "@fluentui/react-icons": "^2.0.241",
-    "@mantine/core": "^7.10.1",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -22,8 +26,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

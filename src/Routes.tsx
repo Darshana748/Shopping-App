@@ -1,38 +1,48 @@
 import React from "react";
-import { Home } from "./pages/Home/Home.tsx";
-import { ContactUs } from "./pages/ContactUs/ContactUs.tsx";
-import { AboutUs } from "./pages/AboutUs/AboutUs.tsx";
-import { OurProducts } from "./pages/OurProducts/OurProducts.tsx";
+import { Home } from "./pages/Home/Home";
+import { ContactUs } from "./pages/ContactUs/ContactUs";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
+import { OurProducts } from "./pages/OurProducts/OurProducts";
 import {
   BoxFilled,
+  BoxRegular,
+  bundleIcon,
   HomeFilled,
+  HomeRegular,
   PersonCallFilled,
+  PersonCallRegular,
   PersonQuestionMarkFilled,
+  PersonQuestionMarkRegular,
 } from "@fluentui/react-icons";
 
-export const pageData = [
+const HomeIcon = bundleIcon(HomeFilled,HomeRegular);
+const BoxIcon = bundleIcon (BoxFilled,BoxRegular );
+const ContactIcon = bundleIcon(PersonCallFilled,PersonCallRegular);
+const AboutIcon = bundleIcon(PersonQuestionMarkFilled ,PersonQuestionMarkRegular)
+
+export const navData = [
   {
     path: "/",
     element: <Home />,
     title: "Home",
-    icon: <HomeFilled />,
+    icon: <HomeIcon />,
   },
   {
     path: "/our-products",
     element: <OurProducts />,
     title: "Our Products",
-    icon: <BoxFilled />,
+    icon: <BoxIcon />,
   },
   {
     path: "/contact-us",
     element: <ContactUs />,
     title: "Contact Us",
-    icon: <PersonCallFilled />,
+    icon: <ContactIcon />,
   },
   {
     path: "/about-us",
     element: <AboutUs />,
     title: "About Us",
-    icon: <PersonQuestionMarkFilled />,
+    icon: <AboutIcon />,
   },
 ];

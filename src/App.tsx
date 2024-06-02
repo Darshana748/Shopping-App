@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toolbar } from "./Toolbar/Toolbar";
 import {
-  BrowserRouter,
-  Route,
-  Router,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
-import { pageData } from "./Routes.tsx";
-import { Toolbar } from "./Toolbar/Toolbar.tsx";
+  FluentProvider,
+  teamsDarkTheme,
+  teamsLightTheme,
+} from "@fluentui/react-components";
+import { pageData } from "./data/Data";
+
 const App = () => {
+  const [themeValue, setTheme] = useState(teamsLightTheme);
   return (
-    <BrowserRouter>
-      <Toolbar />
-      <Routes>
-        {pageData.map((item) => (
-          <Route path={item.path} element={item.element} />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <FluentProvider theme={themeValue}>
+      <BrowserRouter>
+        <Toolbar changeTheme={setTheme} theme={themeValue} />
+        <Routes>
+          {pageData.map((item) => (
+            <Route path={item.path} element={item.element} />
+          ))}
+        </Routes>
+      </BrowserRouter>
+    </FluentProvider>
   );
 };
 
